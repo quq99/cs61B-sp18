@@ -17,12 +17,12 @@ public class Planet{
     }
 
     public Planet(Planet p) {
-        p.xxPos = xxPos;
-        p.yyPos = yyPos;
-        p.xxVel = xxVel;
-        p.yyVel = yyVel;
-        p.mass = mass;
-        p.imgFileName = imgFileName;
+        xxPos       = p.xxPos;
+        yyPos       = p.yyPos;
+        xxVel       = p.xxVel;
+        yyVel       = p.yyVel;
+        mass        = p.mass;
+        imgFileName = p.imgFileName;
     }
 
 
