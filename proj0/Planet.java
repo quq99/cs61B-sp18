@@ -57,5 +57,28 @@ public class Planet{
         return force * dyy / distance;
     }
 
+    public double calcNetForceExertedByX(Planet[] allp) {
+        double forceX  = 0;
+        double forcexx = 0;
+        for (Planet p: allp) {
+            if (!p.equals(this)) {
+                forcexx = calcForceExertedByX(p);
+                forceX = forceX + forcexx;
+            }
+        }
+        return forceX;
+    }
+
+    public double calcNetForceExertedByY(Planet[] allp) {
+        double forceY  = 0;
+        double forceyy = 0;
+        for (Planet p: allp) {
+            if (!p.equals(this)) {
+                forceyy = calcForceExertedByY(p);
+                forceY = forceY + forceyy;
+            }
+        }
+        return forceY;
+    }
 
 }
